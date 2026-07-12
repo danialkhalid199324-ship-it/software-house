@@ -6,19 +6,29 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/lib/data";
 
-// `dark` is retained for API compatibility (the footer passes it); the brand
-// logo image renders the same on light and dark surfaces.
-export function Logo({ dark = false }: { dark?: boolean }) {
-  void dark;
+// Transparent-background logo (icon + "TrivaSoft" wordmark only; the "Technology"
+// line is dropped from the mark — the full company name lives on elsewhere in
+// metadata, footer text and JSON-LD). Two same-sized variants: a dark wordmark
+// for light surfaces and a white wordmark for dark surfaces (the footer, and the
+// header while it is transparent over the dark hero). `dark` selects the variant;
+// `className` sets the rendered size (header default; the footer passes a larger height).
+export function Logo({
+  dark = false,
+  className = "h-[54px] w-auto",
+}: {
+  dark?: boolean;
+  className?: string;
+}) {
+  const src = dark ? "/Logo-TrivaSoft-onDark.png" : "/Logo-TrivaSoft.png";
   return (
     <Link href="/" className="flex items-center" aria-label={`${site.name} home`}>
       <Image
-        src="/Logo.png"
+        src={src}
         alt={site.name}
-        width={1402}
-        height={1122}
+        width={891}
+        height={654}
         priority
-        className="h-9 w-auto"
+        className={className}
       />
     </Link>
   );

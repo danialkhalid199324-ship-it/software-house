@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-carbon bg-ink text-slate-400">
       <div className="wrap grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-4">
-          <Logo dark />
+          <Logo dark className="h-[68px] w-auto" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed">
             {site.description}
           </p>

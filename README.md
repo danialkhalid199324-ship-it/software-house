@@ -60,7 +60,7 @@ and the form still shows success. **In production, at least one channel must be 
 3. ~~Add Privacy Policy and Terms & Conditions~~ — done (`/privacy`, `/terms`, linked in the footer). Have them reviewed by a legal professional and add an ABN if applicable.
 4. Add a public phone number to `site` (and re-add it to the contact/footer blocks) once confirmed.
 5. Replace the portfolio cover blocks (currently the solution title on a blueprint panel) with real imagery when available. Copy is production-ready.
-6. Add a favicon/OG image to `app/` (`icon.png`, `opengraph-image.png`).
+6. ~~Add a favicon~~ — done: the browser/app icon is `public/Icon.png` (set via `metadata.icons` in `app/layout.tsx`). Still add a social share image (`app/opengraph-image.png`) when ready.
 
 ## SEO
 

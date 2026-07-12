@@ -1,22 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/lib/data";
 
+// `dark` is retained for API compatibility (the footer passes it); the brand
+// logo image renders the same on light and dark surfaces.
 export function Logo({ dark = false }: { dark?: boolean }) {
+  void dark;
   return (
-    <Link
-      href="/"
-      className={`flex items-center gap-2.5 font-display text-[15px] font-semibold tracking-tight ${
-        dark ? "text-white" : "text-slate-900"
-      }`}
-    >
-      <span className="relative grid h-7 w-7 place-items-center rounded-md bg-signal">
-        <span className="block h-2.5 w-2.5 rotate-45 border-2 border-white" />
-      </span>
-      {site.name}
+    <Link href="/" className="flex items-center" aria-label={`${site.name} home`}>
+      <Image
+        src="/Logo.png"
+        alt={site.name}
+        width={1402}
+        height={1122}
+        priority
+        className="h-9 w-auto"
+      />
     </Link>
   );
 }

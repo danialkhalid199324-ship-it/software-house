@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description: site.description,
+  icons: {
+    icon: "/Icon.png",
+    shortcut: "/Icon.png",
+    apple: "/Icon.png",
+  },
   keywords: [
     "custom software development",
     "AI agents",

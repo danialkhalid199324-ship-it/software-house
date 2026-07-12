@@ -83,8 +83,6 @@ export default function ContactPage() {
                     {site.email}
                   </a>
                   <br />
-                  {site.phone}
-                  <br />
                   {site.location}
                 </p>
               </div>

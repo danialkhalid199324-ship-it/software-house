@@ -26,6 +26,12 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  // Header is transparent over the dark hero only while at the top of the page
+  // and the mobile menu is closed. In that state, foreground text/icons must be
+  // light to stay readable; once scrolled (white bg) or the menu is open (white
+  // panel), they switch back to dark.
+  const light = !scrolled && !open;
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
@@ -44,14 +50,18 @@ export function Nav() {
       }`}
     >
       <div className="wrap flex h-16 items-center justify-between">
-        <Logo />
+        <Logo dark={light} />
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={`text-sm transition-colors ${
-                pathname.startsWith(item.href)
+                light
+                  ? pathname.startsWith(item.href)
+                    ? "text-white"
+                    : "text-slate-300 hover:text-white"
+                  : pathname.startsWith(item.href)
                   ? "text-slate-900"
                   : "text-slate-500 hover:text-slate-900"
               }`}
@@ -60,7 +70,7 @@ export function Nav() {
             </Link>
           ))}
           <Link href="/contact" className="btn-primary !px-4 !py-2">
-            Start a project
+            Book a Consultation
           </Link>
         </nav>
         <button
@@ -71,19 +81,19 @@ export function Nav() {
         >
           <span className="relative block h-3.5 w-5">
             <span
-              className={`absolute left-0 top-0 h-0.5 w-full bg-slate-900 transition-transform ${
-                open ? "translate-y-1.5 rotate-45" : ""
-              }`}
+              className={`absolute left-0 top-0 h-0.5 w-full transition-transform ${
+                light ? "bg-white" : "bg-slate-900"
+              } ${open ? "translate-y-1.5 rotate-45" : ""}`}
             />
             <span
-              className={`absolute left-0 top-1.5 h-0.5 w-full bg-slate-900 transition-opacity ${
-                open ? "opacity-0" : ""
-              }`}
+              className={`absolute left-0 top-1.5 h-0.5 w-full transition-opacity ${
+                light ? "bg-white" : "bg-slate-900"
+              } ${open ? "opacity-0" : ""}`}
             />
             <span
-              className={`absolute left-0 top-3 h-0.5 w-full bg-slate-900 transition-transform ${
-                open ? "-translate-y-1.5 -rotate-45" : ""
-              }`}
+              className={`absolute left-0 top-3 h-0.5 w-full transition-transform ${
+                light ? "bg-white" : "bg-slate-900"
+              } ${open ? "-translate-y-1.5 -rotate-45" : ""}`}
             />
           </span>
         </button>
@@ -101,7 +111,7 @@ export function Nav() {
               </Link>
             ))}
             <Link href="/contact" className="btn-primary mt-2">
-              Start a project
+              Book a Consultation
             </Link>
           </div>
         </nav>

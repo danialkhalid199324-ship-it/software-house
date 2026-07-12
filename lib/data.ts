@@ -1,24 +1,24 @@
 // ---------------------------------------------------------------------------
-// Site content — single source of truth.
-// Placeholder branding: change `site.name` once the real brand is decided.
+// Site content — single source of truth for TrivaSoft Technology.
+// Renaming the company or editing any service/industry is a one-file change.
 // ---------------------------------------------------------------------------
 
 export const site = {
-  name: "Meridian Labs", // placeholder brand
+  name: "TrivaSoft Technology",
   tagline: "Software engineering for serious operations",
   description:
-    "We engineer software, AI solutions and automation systems that help businesses grow, improve efficiency and solve complex operational challenges.",
-  url: "https://example.com", // set to production domain before launch
-  email: "hello@example.com",
-  phone: "+61 000 000 000",
-  location: "Melbourne, Australia",
+    "TrivaSoft Technology engineers custom software, AI solutions and automation that help businesses improve efficiency, reduce manual work and transform how they operate.",
+  url: "https://www.trivasofttechnology.com.au",
+  email: "hello@trivasofttechnology.com.au",
+  location: "Australia",
 };
 
 export const nav = [
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Work", href: "/portfolio" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  // { label: "Work", href: "/portfolio" }, // hidden from nav for now — route still live at /portfolio
 ];
 
 // --- Services --------------------------------------------------------------
@@ -34,138 +34,138 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "web-development",
-    title: "Web Development",
-    group: "Build",
-    summary:
-      "High-performance web platforms engineered on modern frameworks — not template sites.",
-    detail:
-      "We build production web applications with the same rigour as any other software system: typed codebases, automated testing, CI/CD pipelines and performance budgets. The result is a platform that loads fast, ranks well and scales with your business rather than needing a rebuild in eighteen months.",
-    deliverables: [
-      "Next.js / React application architecture",
-      "Core Web Vitals & SEO engineering",
-      "Headless CMS integration",
-      "Accessibility to WCAG 2.2 AA",
-    ],
-  },
-  {
-    slug: "mobile-app-development",
-    title: "Mobile App Development",
-    group: "Build",
-    summary:
-      "Native-quality iOS and Android apps from a single, maintainable codebase.",
-    detail:
-      "Cross-platform engineering with React Native lets us ship to both app stores without doubling your maintenance cost. We handle the full lifecycle — architecture, offline behaviour, push notifications, store submission and post-launch releases.",
-    deliverables: [
-      "React Native / Expo builds",
-      "Offline-first data sync",
-      "App Store & Play Store release management",
-      "Analytics and crash monitoring",
-    ],
-  },
-  {
-    slug: "custom-software",
+    slug: "custom-software-development",
     title: "Custom Software Development",
     group: "Build",
     summary:
-      "Purpose-built systems for the workflows off-the-shelf software can't handle.",
+      "Purpose-built platforms engineered around the way your business actually works — not forced into off-the-shelf software.",
     detail:
-      "When your operation has outgrown spreadsheets and generic SaaS, we design and build software around how your business actually works — client management, rostering, compliance, reporting — with the data model, permissions and audit trails your sector demands.",
+      "When spreadsheets and generic SaaS start dictating how your team operates, it's time for software built around your processes. We design the data model, workflows, permissions and reporting your operation needs, then build it to production standards with typed code, automated testing and proper documentation.",
     deliverables: [
-      "Domain modelling & systems design",
-      "Role-based access & audit logging",
-      "Reporting and data export",
-      "Documentation and handover",
+      "Systems design and data modelling",
+      "Role-based access and audit logging",
+      "Reporting, dashboards and data exports",
+      "Documentation and full handover",
     ],
   },
   {
-    slug: "ui-ux-design",
-    title: "UI/UX Product Design",
-    group: "Build",
-    summary:
-      "Interfaces designed from user research, tested before a line of code is written.",
-    detail:
-      "Good software fails when people can't use it. Our product design practice covers research, information architecture, interaction design and usability testing — so what we build is adopted by your team and your clients, not worked around.",
-    deliverables: [
-      "User research & journey mapping",
-      "Wireframes and interactive prototypes",
-      "Design systems and component libraries",
-      "Usability testing",
-    ],
-  },
-  {
-    slug: "figma-design",
-    title: "Figma Design",
-    group: "Build",
-    summary:
-      "Production-ready Figma files: design systems, prototypes and developer handoff.",
-    detail:
-      "Whether your team builds in-house or with us, we produce Figma work engineered for implementation — tokenised design systems, auto-layout components, annotated flows and clickable prototypes that stakeholders can test before development begins.",
-    deliverables: [
-      "Tokenised design systems",
-      "High-fidelity screens & prototypes",
-      "Developer handoff specs",
-      "Brand-aligned component libraries",
-    ],
-  },
-  {
-    slug: "ai-agents",
-    title: "Custom AI Agents",
+    slug: "ai-solutions-ai-agents",
+    title: "AI Solutions & AI Agents",
     group: "Intelligence",
     summary:
-      "AI agents that handle enquiries, documentation and scheduling — safely, inside guardrails.",
+      "Practical AI that handles real work — enquiries, documentation, research and scheduling — safely, inside clear guardrails.",
     detail:
-      "We design agents around your actual processes: triaging enquiries, drafting session notes and reports, preparing compliance documentation, scheduling and follow-ups. Every agent ships with guardrails, human-in-the-loop review points and full logging, so quality and accountability are engineered in.",
+      "We build AI into your operation where it genuinely saves time: triaging enquiries, drafting notes and reports, answering questions from your own knowledge base and preparing documentation. Every solution ships with guardrails, human review points and full logging, so quality and accountability are engineered in from the start.",
     deliverables: [
-      "Enquiry triage & response agents",
-      "Documentation & report-drafting agents",
+      "Enquiry triage and response agents",
+      "Document and report drafting with human review",
       "Retrieval over your policies and knowledge base",
-      "Guardrails, evaluation and audit logs",
+      "Guardrails, evaluation and audit logging",
     ],
   },
   {
-    slug: "business-automation",
-    title: "Business Automation",
+    slug: "business-process-automation",
+    title: "Business Process Automation",
     group: "Intelligence",
     summary:
-      "Hours of repetitive admin, removed. Reliable pipelines across the tools you already use.",
+      "Hours of repetitive admin removed with reliable, monitored automations across the tools you already use.",
     detail:
-      "We map your workflows end to end, then automate the handoffs — intake to CRM, service delivery to invoicing, incident to report. Built on robust integration platforms and custom code where it matters, with error handling and alerting so automations fail loudly, never silently.",
+      "We map your workflows end to end, then automate the handoffs between them — intake to CRM, delivery to invoicing, incident to report. Built with robust integration platforms and custom code where it matters, with error handling and alerting so automations fail loudly, never silently.",
     deliverables: [
-      "Workflow mapping & automation design",
-      "Zapier / Make / n8n and custom pipelines",
-      "Document generation & e-signature flows",
+      "Workflow mapping and automation design",
+      "Integration and custom automation pipelines",
+      "Document generation and e-signature flows",
       "Monitoring, alerting and run logs",
     ],
   },
   {
-    slug: "crm-workflow-systems",
-    title: "CRM & Workflow Systems",
+    slug: "web-application-development",
+    title: "Web Application Development",
+    group: "Build",
+    summary:
+      "Fast, secure web applications engineered on modern frameworks — built to scale, not to be rebuilt in eighteen months.",
+    detail:
+      "We build web platforms with the rigour of any serious software system: typed codebases, automated testing, performance budgets and CI/CD. The result loads fast, ranks well, meets accessibility standards and grows with your business rather than needing a rebuild.",
+    deliverables: [
+      "Next.js / React application architecture",
+      "Core Web Vitals and SEO engineering",
+      "Headless CMS and integrations",
+      "Accessibility to WCAG 2.2 AA",
+    ],
+  },
+  {
+    slug: "mobile-application-development",
+    title: "Mobile Application Development",
+    group: "Build",
+    summary:
+      "Native-quality iOS and Android apps from a single, maintainable codebase.",
+    detail:
+      "Cross-platform engineering lets us ship to both app stores without doubling your maintenance cost. We handle the full lifecycle — architecture, offline behaviour, notifications, store submission and ongoing releases.",
+    deliverables: [
+      "Cross-platform iOS and Android builds",
+      "Offline-first data sync",
+      "App Store and Play Store release management",
+      "Analytics and crash monitoring",
+    ],
+  },
+  {
+    slug: "client-portals",
+    title: "Client Portals",
+    group: "Build",
+    summary:
+      "Secure self-service portals that give your clients and staff a single place to get things done.",
+    detail:
+      "We build branded portals where clients, participants or partners can submit information, track progress, access documents and communicate — reducing inbound admin while improving the experience. Role-based access and audit trails come as standard.",
+    deliverables: [
+      "Branded, responsive portal experience",
+      "Secure authentication and role-based access",
+      "Document sharing, forms and status tracking",
+      "Notifications and activity logging",
+    ],
+  },
+  {
+    slug: "crm-systems",
+    title: "CRM Systems",
     group: "Intelligence",
     summary:
-      "Client management built around your delivery model — bookings, notes, invoicing, reporting.",
+      "Client management built around your delivery model — bookings, records, invoicing and reporting in one coherent system.",
     detail:
-      "Generic CRMs force your operation into someone else's pipeline. We configure or build client management systems that mirror your service delivery: referrals, intake, scheduling, case notes, funding tracking and invoicing in one coherent system your team actually keeps updated.",
+      "Generic CRMs force your operation into someone else's pipeline. We build or configure client management that mirrors how you actually deliver: referrals, intake, scheduling, records, funding and invoicing — in one system your team will actually keep up to date.",
     deliverables: [
-      "CRM selection, build or configuration",
+      "CRM build or configuration",
       "Booking, intake and referral workflows",
-      "Invoicing and funding/claims tracking",
+      "Invoicing and funding / claims tracking",
       "Dashboards for owners and managers",
     ],
   },
   {
-    slug: "enterprise-software",
-    title: "Enterprise Software",
+    slug: "rto-management-systems",
+    title: "RTO Management Systems",
     group: "Operate",
     summary:
-      "Multi-team platforms with the security, compliance and reliability enterprises require.",
+      "Compliance-ready student and training management for registered training organisations.",
     detail:
-      "For larger organisations we deliver systems built for scrutiny: SSO and granular permissions, environment separation, penetration-tested infrastructure, SLAs and documented disaster recovery. Engineering practice that stands up to procurement and audit.",
+      "RTOs run on evidence. We build systems that keep enrolment, delivery, assessment and compliance records aligned to ASQA obligations — reducing the manual effort of staying audit-ready and freeing trainers to focus on students instead of paperwork.",
     deliverables: [
-      "SSO / SAML and role hierarchies",
-      "Security review & compliance documentation",
-      "High-availability infrastructure",
-      "SLA-backed support",
+      "Student management and enrolment workflows",
+      "Assessment, trainer and timetable tracking",
+      "Audit-ready evidence and reporting",
+      "Integration with SMS / LMS platforms",
+    ],
+  },
+  {
+    slug: "ndis-healthcare-software",
+    title: "NDIS & Healthcare Software",
+    group: "Operate",
+    summary:
+      "Purpose-built platforms for NDIS providers and healthcare teams, where documentation and privacy are non-negotiable.",
+    detail:
+      "We build systems designed for sectors where the paperwork is the difference between passing an audit and losing registration: participant and client management, progress notes, incident and compliance workflows, secure records and claiming — with privacy and Australian data residency built in.",
+    deliverables: [
+      "Participant and client management",
+      "Progress notes, incidents and compliance workflows",
+      "Claiming and billing automation",
+      "Secure records and data residency",
     ],
   },
   {
@@ -173,44 +173,59 @@ export const services: Service[] = [
     title: "API Integrations",
     group: "Operate",
     summary:
-      "Your systems, finally talking to each other. Clean, documented, monitored integrations.",
+      "Your systems, finally talking to each other — clean, documented, monitored integrations.",
     detail:
-      "Accounting, payroll, government portals, payment gateways, industry platforms — we build and maintain the connective tissue between them. Versioned, documented APIs with retries, rate-limit handling and monitoring, so data moves once and moves correctly.",
+      "Accounting, payroll, government portals, payment gateways and industry platforms — we build and maintain the connective tissue between them. Versioned, documented APIs with retries, rate-limit handling and monitoring, so data moves once and moves correctly.",
     deliverables: [
-      "Third-party & government API integration",
-      "Custom REST/GraphQL API development",
+      "Third-party and government API integration",
+      "Custom REST / GraphQL API development",
       "Webhook and event architectures",
-      "Integration monitoring",
+      "Integration monitoring and alerting",
     ],
   },
   {
-    slug: "cloud-solutions",
-    title: "Cloud Solutions",
-    group: "Operate",
+    slug: "ui-ux-design",
+    title: "UI/UX Design",
+    group: "Build",
     summary:
-      "Secure, cost-efficient cloud architecture on AWS, Azure and Vercel.",
+      "Interfaces designed from real user needs and tested before a line of code is written.",
     detail:
-      "We design cloud infrastructure that matches your risk profile and budget: data residency where regulation demands it, automated backups, infrastructure as code and cost monitoring. Migrations handled without downtime drama.",
+      "Good software fails when people can't use it. Our design practice covers research, information architecture, interaction design and usability testing, along with tokenised design systems and developer-ready handoff — so what we build gets adopted, not worked around.",
     deliverables: [
-      "Cloud architecture & migration",
-      "Infrastructure as code",
-      "Backup, DR and data residency",
-      "Cost optimisation",
+      "User research and journey mapping",
+      "Wireframes and interactive prototypes",
+      "Design systems and component libraries",
+      "Usability testing and developer handoff",
     ],
   },
   {
-    slug: "support-maintenance",
-    title: "Ongoing Support & Maintenance",
+    slug: "software-maintenance-support",
+    title: "Software Maintenance & Support",
     group: "Operate",
     summary:
       "Software is never finished. We keep yours secure, current and improving.",
     detail:
-      "Every system we ship can move onto a support agreement: proactive dependency and security updates, uptime monitoring, a real human to call, and a monthly improvement cadence so the platform keeps pace with your business.",
+      "Every system we build can move onto a support agreement: proactive dependency and security updates, uptime and performance monitoring, a real person to reach, and a regular improvement cadence so the platform keeps pace with your business.",
     deliverables: [
-      "Security patching & dependency updates",
-      "Uptime & performance monitoring",
+      "Security patching and dependency updates",
+      "Uptime and performance monitoring",
       "Agreed response-time SLAs",
-      "Monthly improvement sprints",
+      "Ongoing improvement sprints",
+    ],
+  },
+  {
+    slug: "digital-transformation-consulting",
+    title: "Digital Transformation Consulting",
+    group: "Operate",
+    summary:
+      "A clear-eyed plan for modernising how your business runs — before anyone writes code.",
+    detail:
+      "We help you see where technology will actually move the needle: mapping current workflows, identifying the highest-value opportunities for software, automation and AI, and sequencing them into a practical roadmap with honest estimates — so investment goes where it pays off.",
+    deliverables: [
+      "Operations and workflow assessment",
+      "Technology and automation roadmap",
+      "Prioritised, costed opportunity map",
+      "Vendor-neutral, honest recommendations",
     ],
   },
 ];
@@ -226,30 +241,6 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    slug: "ndis-providers",
-    title: "NDIS Providers",
-    summary:
-      "Systems built for a sector where documentation is the difference between passing an audit and losing registration.",
-    points: [
-      "Client management aligned to NDIS Practice Standards",
-      "Audit-ready documentation, incident and complaints workflows",
-      "Rostering, service bookings and NDIA claiming automation",
-      "AI-assisted progress notes and report drafting with human review",
-    ],
-  },
-  {
-    slug: "education-rtos",
-    title: "Education & RTOs",
-    summary:
-      "Compliance-heavy training organisations need software that keeps pace with ASQA and CRICOS obligations.",
-    points: [
-      "Student management and enrolment automation",
-      "Evidence collection for audit and re-registration",
-      "Trainer, timetable and assessment workflows",
-      "Integration with SMS/LMS platforms",
-    ],
-  },
-  {
     slug: "healthcare-allied-health",
     title: "Healthcare & Allied Health",
     summary:
@@ -257,8 +248,32 @@ export const industries: Industry[] = [
     points: [
       "Secure client records and session documentation",
       "Booking, reminders and telehealth integration",
-      "Medicare / private billing workflows",
+      "Medicare and private billing workflows",
       "Australian data residency and privacy compliance",
+    ],
+  },
+  {
+    slug: "ndis-providers",
+    title: "NDIS Providers",
+    summary:
+      "Systems built for a sector where documentation is the difference between passing an audit and keeping your registration.",
+    points: [
+      "Client management aligned to NDIS Practice Standards",
+      "Audit-ready documentation, incident and complaints workflows",
+      "Rostering, service bookings and claiming automation",
+      "AI-assisted progress notes and reports with human review",
+    ],
+  },
+  {
+    slug: "registered-training-organisations",
+    title: "Registered Training Organisations",
+    summary:
+      "Compliance-heavy training providers need software that keeps pace with ASQA obligations without drowning trainers in admin.",
+    points: [
+      "Student management and enrolment automation",
+      "Evidence collection for audit and re-registration",
+      "Trainer, timetable and assessment workflows",
+      "Integration with SMS and LMS platforms",
     ],
   },
   {
@@ -267,7 +282,7 @@ export const industries: Industry[] = [
     summary:
       "Firms in law, accounting and consulting run on knowledge — we turn it into leverage.",
     points: [
-      "Matter/engagement management systems",
+      "Matter and engagement management systems",
       "Document automation and templating",
       "Time, billing and reporting pipelines",
       "AI research and drafting assistants with guardrails",
@@ -325,7 +340,7 @@ export const process = [
   {
     step: "05",
     title: "Support",
-    text: "Monitoring, security updates and a monthly improvement cadence. The system keeps getting better after go-live.",
+    text: "Monitoring, security updates and a regular improvement cadence. The system keeps getting better after go-live.",
   },
 ];
 
@@ -342,40 +357,39 @@ export const technologies = [
   "AWS",
   "Azure",
   "Vercel",
-  "Anthropic Claude",
-  "OpenAI",
-  "LangChain",
-  "Zapier",
+  "AI / LLMs",
+  "RAG Pipelines",
+  "Vector Databases",
+  "REST & GraphQL APIs",
   "n8n",
+  "Zapier",
   "Stripe",
   "Tailwind CSS",
-  "Framer Motion",
   "Docker",
-  "GraphQL",
 ];
 
 // --- FAQ -----------------------------------------------------------------------
 
 export const faqs = [
   {
-    q: "How much does a typical project cost?",
-    a: "Automation and integration projects typically start around $8k–$25k. Custom platforms and client management systems commonly range $30k–$120k depending on scope. After a discovery call we provide a fixed, itemised proposal — no open-ended hourly surprises.",
+    q: "How much does a project cost?",
+    a: "Every project is scoped and quoted individually. After a short discovery call we provide a fixed, itemised proposal — scope, timeline and cost in writing — so there are no open-ended hourly surprises.",
   },
   {
     q: "How long does a build take?",
-    a: "Automations and integrations: 2–6 weeks. Web platforms and CRMs: 8–16 weeks. Enterprise systems: phased over 3–9 months. You see working software weekly from the second sprint onward.",
+    a: "It depends on scope. Automations and integrations are typically the fastest to deliver, web platforms and CRMs take longer, and enterprise systems are delivered in phases. Either way, you see working software regularly rather than waiting for a single reveal at the end.",
   },
   {
     q: "Can you work with our existing systems?",
-    a: "Yes — most of our work connects to systems already in place: accounting platforms, practice management tools, government portals, CRMs. We integrate first and replace only where it genuinely pays off.",
+    a: "Yes — most of our work connects to systems already in place: accounting platforms, practice management tools, government portals and CRMs. We integrate first and replace only where it genuinely pays off.",
   },
   {
     q: "Is our data safe with AI features?",
-    a: "We design AI features with data minimisation, Australian data residency options, no training on your data, and human review points for anything consequential. Every agent ships with logging so you can see exactly what it did and why.",
+    a: "We design AI features with data minimisation, Australian data residency options, no training of external models on your data, and human review points for anything consequential. Every AI workflow is logged, so you can see exactly what it did and why.",
   },
   {
     q: "Do you offer ongoing support?",
-    a: "Every build can move onto a support agreement covering security updates, monitoring, response-time SLAs and a monthly improvement sprint. We don't ship and disappear.",
+    a: "Every build can move onto a support agreement covering security updates, monitoring, response-time SLAs and a regular improvement cadence. We don't ship and disappear.",
   },
   {
     q: "Who owns the code and IP?",
@@ -383,7 +397,8 @@ export const faqs = [
   },
 ];
 
-// --- Portfolio placeholders -------------------------------------------------
+// --- Portfolio: solution showcases -----------------------------------------
+// Representative examples of what we build — not named client work.
 
 export type Project = {
   slug: string;
@@ -398,80 +413,120 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ndis-operations-platform",
-    title: "Operations Platform for an NDIS Provider",
-    category: "Custom Software · Automation",
+    slug: "healthcare-platform",
+    title: "Healthcare Platform",
+    category: "Custom Software · Healthcare & Allied Health",
     summary:
-      "A single system replacing five disconnected tools — intake, rostering, notes, claiming and compliance.",
+      "A secure platform bringing client records, scheduling, documentation and billing into one clinical-grade system.",
     problem:
-      "A growing provider was managing 200+ participants across spreadsheets, a generic CRM and email. Claims were delayed, documentation was inconsistent, and audit preparation consumed weeks of staff time.",
+      "Healthcare and allied health teams often run on a patchwork of booking tools, spreadsheets and email — making records hard to trust, billing slow and privacy difficult to guarantee.",
     solution:
-      "We built a purpose-designed platform covering referrals, service agreements, rostering, progress notes and NDIA claiming, with an AI drafting layer for notes that staff review and approve.",
+      "We build unified platforms covering secure client records, session documentation, bookings and reminders, telehealth and billing, with privacy and Australian data residency engineered in from the first commit.",
     results: [
-      "Placeholder metric — e.g. claiming cycle reduced from 14 days to 2",
-      "Placeholder metric — e.g. 30+ admin hours saved weekly",
-      "Placeholder metric — e.g. audit preparation time cut by 80%",
+      "Client records, notes and billing in one secure system",
+      "Faster documentation with structured, reusable templates",
+      "Fewer no-shows through automated reminders",
+      "Privacy and data-residency controls built in",
     ],
-    stack: ["Next.js", "PostgreSQL", "Claude", "AWS"],
+    stack: ["Next.js", "PostgreSQL", "Node.js", "AWS"],
   },
   {
-    slug: "rto-enrolment-automation",
-    title: "Enrolment Automation for an RTO",
+    slug: "ndis-operations-platform",
+    title: "NDIS Operations Platform",
+    category: "Custom Software · NDIS",
+    summary:
+      "A single system replacing disconnected tools across intake, rostering, notes, claiming and compliance.",
+    problem:
+      "Growing NDIS providers commonly manage participants across spreadsheets, a generic CRM and email — delaying claims, fragmenting documentation and turning audit preparation into weeks of work.",
+    solution:
+      "We build purpose-designed platforms covering referrals, service agreements, rostering, progress notes and claiming, with an AI drafting layer for notes that staff review and approve before anything is filed.",
+    results: [
+      "Intake, delivery, claiming and compliance in one place",
+      "Audit-ready documentation and incident workflows",
+      "Faster, more consistent progress notes with human review",
+      "Less admin, more time for participant support",
+    ],
+    stack: ["Next.js", "PostgreSQL", "AI / LLMs", "AWS"],
+  },
+  {
+    slug: "rto-management-system",
+    title: "RTO Management System",
+    category: "Custom Software · Training & Compliance",
+    summary:
+      "Enrolment, delivery and compliance records kept continuously audit-ready for registered training organisations.",
+    problem:
+      "RTOs lose time re-keying data across systems and scrambling to assemble evidence at audit time, with errors creeping into the compliance records that matter most.",
+    solution:
+      "We build training management systems that connect enrolment, assessment, trainer and timetable data, generate compliant documentation automatically and keep an audit-ready evidence trail aligned to ASQA obligations.",
+    results: [
+      "Student, trainer and assessment data in one system",
+      "Evidence continuously ready for audit and re-registration",
+      "Less manual re-keying across platforms",
+      "Integration with existing SMS / LMS tools",
+    ],
+    stack: ["Next.js", "Node.js", "REST APIs", "Azure"],
+  },
+  {
+    slug: "business-automation-platform",
+    title: "Business Automation Platform",
     category: "Automation · Integrations",
     summary:
-      "Enquiry-to-enrolment pipeline connecting website, SMS and finance systems with zero re-keying.",
+      "An enquiry-to-invoice pipeline that connects the tools a business already runs on — with no re-keying.",
     problem:
-      "Every enrolment was typed into three systems by hand. Errors crept into compliance records and follow-ups were missed during intake peaks.",
+      "Teams re-enter the same information across three or four systems by hand, losing hours to admin and letting errors and missed follow-ups slip through during busy periods.",
     solution:
-      "An automated pipeline validates applications, generates compliant documentation, syncs the student management system and schedules follow-ups — with exceptions routed to staff.",
+      "We map the workflow end to end, then automate the handoffs — validating data, generating documents, syncing systems and scheduling follow-ups, with exceptions routed to a person and every run logged.",
     results: [
-      "Placeholder metric — e.g. enrolment processing time down 90%",
-      "Placeholder metric — e.g. zero data re-entry across systems",
-      "Placeholder metric — e.g. enquiry response time under 5 minutes",
+      "Hours of repetitive admin removed each week",
+      "Data entered once and synced across systems",
+      "Faster, more reliable follow-up",
+      "Monitoring and alerting on every automation",
     ],
-    stack: ["Node.js", "n8n", "REST APIs", "Azure"],
+    stack: ["Node.js", "n8n", "REST APIs", "AWS"],
   },
   {
-    slug: "allied-health-ai-documentation",
-    title: "AI Documentation Assistant for Allied Health",
-    category: "AI Agents",
+    slug: "client-portal",
+    title: "Client Portal",
+    category: "Web · Client Portals",
     summary:
-      "Session notes and reports drafted in minutes, reviewed by clinicians, filed automatically.",
+      "A branded self-service portal giving clients one secure place to submit, track and access their information.",
     problem:
-      "Clinicians were spending 90+ minutes a day on documentation after sessions, delaying reports and driving burnout.",
+      "When clients rely on phone calls and email for updates and documents, teams drown in repetitive inbound admin and clients are left in the dark.",
     solution:
-      "A secure drafting assistant grounded in the practice's templates and policies produces structured notes and report drafts for clinician review, then files approved documents to the practice system.",
+      "We build secure, branded portals where clients can submit forms, track progress, access documents and communicate — with role-based access, notifications and full activity logging.",
     results: [
-      "Placeholder metric — e.g. documentation time reduced by 65%",
-      "Placeholder metric — e.g. report turnaround from 3 weeks to 4 days",
-      "Placeholder metric — e.g. 100% of drafts human-reviewed before filing",
+      "Reduced inbound calls and email admin",
+      "Clients self-serve documents and status updates",
+      "Secure, role-based access to sensitive information",
+      "A more professional, transparent client experience",
     ],
-    stack: ["Claude", "Python", "FastAPI", "Australian-region hosting"],
+    stack: ["Next.js", "React", "PostgreSQL", "Vercel"],
   },
   {
-    slug: "enterprise-integration-layer",
-    title: "Integration Layer for a National Services Group",
-    category: "Enterprise · Cloud",
+    slug: "enterprise-crm",
+    title: "Enterprise CRM",
+    category: "CRM · Enterprise",
     summary:
-      "An event-driven integration layer connecting payroll, scheduling and finance across four business units.",
+      "A CRM shaped around a real delivery model, with the integrations and reporting leadership needs.",
     problem:
-      "Four acquired businesses ran four incompatible systems. Consolidated reporting took finance two weeks each month.",
+      "Off-the-shelf CRMs force teams into a generic pipeline, so data goes stale, reporting is manual and leadership never gets a single, trustworthy view.",
     solution:
-      "A central integration layer with a shared data model streams events between systems in near real time, feeding a live executive dashboard.",
+      "We build or configure CRM systems that mirror how the business actually delivers — from referral to invoice — integrate them with finance and operations, and surface live dashboards for owners and managers.",
     results: [
-      "Placeholder metric — e.g. month-end reporting from 2 weeks to 1 day",
-      "Placeholder metric — e.g. single source of truth across 4 entities",
-      "Placeholder metric — e.g. 99.95% pipeline uptime",
+      "A CRM that matches your real delivery model",
+      "Integrated finance, operations and reporting",
+      "Live dashboards and a single source of truth",
+      "Higher adoption because it fits how teams work",
     ],
-    stack: ["AWS", "TypeScript", "PostgreSQL", "GraphQL"],
+    stack: ["Next.js", "PostgreSQL", "GraphQL", "AWS"],
   },
 ];
 
-// --- Trust stats -----------------------------------------------------------
+// --- Business strengths (shown where headline stats used to sit) ------------
 
 export const stats = [
-  { value: "40+", label: "systems shipped to production" },
-  { value: "12k+", label: "admin hours automated annually" },
-  { value: "99.9%", label: "uptime across supported platforms" },
-  { value: "100%", label: "client code ownership" },
+  { value: "Custom", label: "software engineered around your workflows" },
+  { value: "AI-first", label: "automation and AI agents, with guardrails" },
+  { value: "Lifecycle", label: "from discovery to launch and support" },
+  { value: "Owned", label: "your source code, IP and infrastructure" },
 ];

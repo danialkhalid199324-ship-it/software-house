@@ -6,7 +6,7 @@ import { projects } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Case studies of custom software, AI and automation systems in production — built for NDIS providers, RTOs, healthcare and enterprise.",
+    "Solution showcases of the custom software, AI and automation we build — for healthcare, NDIS providers, RTOs, professional services and enterprise.",
 };
 
 export default function PortfolioPage() {
@@ -19,14 +19,14 @@ export default function PortfolioPage() {
         />
         <div className="wrap relative pb-20 pt-36 md:pb-24 md:pt-44">
           <Reveal>
-            <p className="eyebrow eyebrow-dark">Selected work</p>
+            <p className="eyebrow eyebrow-dark">Solution showcases</p>
             <h1 className="h-display mt-5 max-w-3xl text-4xl leading-tight text-white md:text-[3.2rem]">
-              Judged by what&apos;s running in production.
+              The systems we engineer for real operations.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-slate-400">
-              A selection of engagements across software, AI and automation.
-              Each follows the same structure: the problem, what we built, and
-              what changed.
+              Representative examples of what we build across software, AI and
+              automation. Each follows the same structure: the challenge, what we
+              build, and what it delivers.
             </p>
           </Reveal>
         </div>
@@ -41,8 +41,11 @@ export default function PortfolioPage() {
                 className="card scroll-mt-24 overflow-hidden"
               >
                 <div className="relative flex h-56 items-center justify-center bg-ink grid-ink md:h-64">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-slate-500">
-                    [ project visual placeholder ]
+                  <span
+                    aria-hidden
+                    className="px-6 text-center font-mono text-xs uppercase tracking-[0.25em] text-slate-400"
+                  >
+                    {p.title}
                   </span>
                   <div
                     aria-hidden
@@ -59,17 +62,17 @@ export default function PortfolioPage() {
                     </h2>
                     <div className="mt-6 space-y-5 text-sm leading-relaxed text-slate-600">
                       <div>
-                        <p className="eyebrow eyebrow-light">The problem</p>
+                        <p className="eyebrow eyebrow-light">The challenge</p>
                         <p className="mt-2">{p.problem}</p>
                       </div>
                       <div>
-                        <p className="eyebrow eyebrow-light">What we built</p>
+                        <p className="eyebrow eyebrow-light">What we build</p>
                         <p className="mt-2">{p.solution}</p>
                       </div>
                     </div>
                   </div>
                   <div className="md:col-span-5">
-                    <p className="eyebrow eyebrow-light">Outcomes</p>
+                    <p className="eyebrow eyebrow-light">What it delivers</p>
                     <ul className="mt-4 space-y-3">
                       {p.results.map((r) => (
                         <li
@@ -103,9 +106,9 @@ export default function PortfolioPage() {
         <div className="wrap py-16 md:py-20">
           <SectionHeader
             center
-            eyebrow="A note on confidentiality"
-            title="Much of our best work is under NDA."
-            lead="The case studies above are representative placeholders. In a discovery call we can walk you through detailed, relevant examples — including systems similar to what you're planning."
+            eyebrow="How to read these"
+            title="Solution showcases, not client disclosures."
+            lead="These are representative examples of what we build, not named client work — much of our best work is under NDA. In a discovery call we can walk you through detailed, relevant examples, including systems similar to what you're planning."
           />
         </div>
       </section>

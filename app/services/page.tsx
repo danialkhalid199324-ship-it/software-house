@@ -7,24 +7,24 @@ import { services } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Custom software development, AI agents, business automation, CRM systems, enterprise software, API integrations and cloud solutions — engineered by one accountable team.",
+    "Custom software development, AI solutions and agents, business automation, web and mobile apps, client portals, CRM, RTO and NDIS platforms, API integrations, UI/UX design and digital transformation — engineered by one accountable team.",
 };
 
 const groups = [
   {
     id: "Build",
     label: "Build",
-    lead: "Products your customers and staff touch every day — engineered for performance, usability and longevity.",
+    lead: "Software your customers and staff use every day — web, mobile, portals and the interfaces that wrap them, engineered for performance, usability and longevity.",
   },
   {
     id: "Intelligence",
     label: "Intelligence & Automation",
-    lead: "Systems that do the work: AI agents, automated pipelines and client management built around your operation.",
+    lead: "Systems that do the thinking and the busywork: AI agents, automated pipelines and CRMs built around your operation.",
   },
   {
     id: "Operate",
     label: "Operate & Scale",
-    lead: "The infrastructure layer — integrations, cloud, enterprise hardening and the support that keeps it all running.",
+    lead: "Sector-ready platforms, integrations, consulting and the ongoing engineering that keeps everything running and improving.",
   },
 ] as const;
 
@@ -43,7 +43,7 @@ export default function ServicesPage() {
               Everything required to design, build and run serious software.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-slate-400">
-              Twelve capabilities across three disciplines. Engage us for a
+              Thirteen capabilities across three disciplines. Engage us for a
               single automation or the whole stack — the engineering standard
               is the same.
             </p>
@@ -98,7 +98,7 @@ export default function ServicesPage() {
                           href={`/contact?service=${s.slug}`}
                           className="mt-6 inline-block text-sm font-medium text-signal hover:text-signal-deep"
                         >
-                          Discuss {s.title.toLowerCase()} →
+                          Discuss {s.title} →
                         </Link>
                       </div>
                       <div className="md:col-span-5">

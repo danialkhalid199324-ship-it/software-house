@@ -6,16 +6,16 @@ import { useReducedMotion } from "framer-motion";
 type Line = { t: string; tone?: "dim" | "ok" | "accent" };
 
 const SCRIPT: Line[] = [
-  { t: "$ meridian deploy --env production", tone: "accent" },
+  { t: "$ trivasoft deploy --env production", tone: "accent" },
   { t: "→ compiling client-portal (next build)", tone: "dim" },
-  { t: "✓ 214 routes · 0 type errors", tone: "ok" },
+  { t: "✓ routes compiled · 0 type errors", tone: "ok" },
   { t: "→ running compliance checks", tone: "dim" },
   { t: "✓ audit-log · permissions · data-residency: au", tone: "ok" },
-  { t: "→ deploying ai-agent: enquiry-triage v2.4", tone: "dim" },
+  { t: "→ deploying ai-agent: enquiry-triage", tone: "dim" },
   { t: "✓ guardrails active · human review: on", tone: "ok" },
   { t: "→ syncing crm → invoicing pipeline", tone: "dim" },
-  { t: "✓ 1,382 records reconciled · 0 exceptions", tone: "ok" },
-  { t: "✓ live in 38s — all systems operational", tone: "accent" },
+  { t: "✓ records reconciled · 0 exceptions", tone: "ok" },
+  { t: "✓ deployed — all systems operational", tone: "accent" },
 ];
 
 export function BuildLog() {

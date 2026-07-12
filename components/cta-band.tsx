@@ -24,9 +24,7 @@ export function CtaBand({
             <Link href="/contact" className="btn-primary !px-7 !py-3.5">
               Book a discovery call
             </Link>
-            <Link href="/portfolio" className="btn-ghost-dark !px-7 !py-3.5">
-              See our work
-            </Link>
+            {/* "See our work" link hidden until real projects exist — route still live at /portfolio */}
           </div>
           <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
             No obligation · Fixed-scope proposals · Reply within 1 business day

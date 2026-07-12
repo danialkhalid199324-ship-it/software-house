@@ -7,7 +7,7 @@ import { industries } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Industries",
   description:
-    "Software, AI and automation for NDIS providers, RTOs, healthcare, professional services, SMBs and enterprise — sectors where compliance and documentation are non-negotiable.",
+    "Software, AI and automation for healthcare and allied health, NDIS providers, registered training organisations, professional services, small and medium businesses and enterprise — sectors where compliance and documentation are non-negotiable.",
 };
 
 export default function IndustriesPage() {
@@ -55,7 +55,7 @@ export default function IndustriesPage() {
                     href="/contact"
                     className="mt-6 inline-block text-sm font-medium text-signal hover:text-signal-deep"
                   >
-                    Talk to us about your {ind.title.toLowerCase()} project →
+                    Talk to us about your {ind.title} project →
                   </Link>
                 </div>
                 <div className="md:col-span-6">

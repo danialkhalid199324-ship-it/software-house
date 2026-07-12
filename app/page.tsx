@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const whyUs = [
   {
     title: "Engineers, not order-takers",
-    text: "We interrogate the problem before writing code. If a $5k automation solves what a $80k platform was quoted for elsewhere, that's what we'll recommend.",
+    text: "We interrogate the problem before writing code. If a focused automation solves what an expensive platform was quoted for elsewhere, that's what we'll recommend.",
   },
   {
     title: "Compliance-grade by default",
@@ -55,9 +55,10 @@ export default function HomePage() {
               We engineer the systems your business runs on.
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-400">
-              Custom software, AI agents and automation that remove operational
-              drag — built to enterprise standards, delivered without the
-              enterprise theatre.
+              TrivaSoft Technology builds custom software, AI solutions and
+              automation — spanning web and mobile apps, client portals and full
+              digital transformation — engineered to enterprise standards and
+              delivered without the enterprise theatre.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn-primary !px-7 !py-3.5">
@@ -70,10 +71,9 @@ export default function HomePage() {
             <dl className="mt-14 grid max-w-lg grid-cols-2 gap-x-8 gap-y-6 border-t border-carbon pt-8 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label}>
-                  <dt className="sr-only">{s.label}</dt>
-                  <dd className="font-display text-2xl font-semibold text-white">
+                  <dt className="font-display text-2xl font-semibold text-white">
                     {s.value}
-                  </dd>
+                  </dt>
                   <dd className="mt-1 text-[11px] leading-snug text-slate-500">
                     {s.label}
                   </dd>
@@ -140,7 +140,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeader
               eyebrow="What we build"
-              title="Twelve capabilities. One accountable team."
+              title="Thirteen capabilities. One accountable team."
               lead="From a single automation to a full enterprise platform — scoped honestly and engineered properly."
             />
             <Reveal>
@@ -266,17 +266,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------ Featured projects */}
+      {/* Featured work — hidden until real projects exist. Route still live at
+          /portfolio. Restore by removing the `false &&` guard below. */}
+      {false && (
       <section className="bg-fog">
         <div className="wrap py-20 md:py-28">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <SectionHeader
               eyebrow="Featured work"
-              title="Systems in production, doing real work."
+              title="Solutions engineered for real operations."
             />
             <Reveal>
               <Link href="/portfolio" className="btn-ghost-light">
-                View all case studies →
+                View all solutions →
               </Link>
             </Reveal>
           </div>
@@ -285,8 +287,11 @@ export default function HomePage() {
               <Reveal key={p.slug} delay={i * 0.08}>
                 <Link href={`/portfolio#${p.slug}`} className="card group block overflow-hidden">
                   <div className="relative flex h-52 items-center justify-center overflow-hidden bg-ink grid-ink">
-                    <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-slate-500">
-                      [ case study visual placeholder ]
+                    <span
+                      aria-hidden
+                      className="px-6 text-center font-mono text-[11px] uppercase tracking-[0.25em] text-slate-400"
+                    >
+                      {p.title}
                     </span>
                     <div
                       aria-hidden
@@ -310,6 +315,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ------------------------------------------------ Technologies */}
       <section className="overflow-hidden border-y border-slate-100 bg-paper py-14">
@@ -361,8 +367,6 @@ export default function HomePage() {
             <Reveal delay={0.1}>
               <p className="mt-8 font-mono text-xs leading-loose text-slate-500">
                 {site.email}
-                <br />
-                {site.phone}
                 <br />
                 {site.location}
               </p>

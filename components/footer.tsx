@@ -55,15 +55,23 @@ export function Footer() {
           <p className="eyebrow eyebrow-dark">Company</p>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link href="/about" className="hover:text-white">About</Link></li>
-            <li><Link href="/portfolio" className="hover:text-white">Work</Link></li>
+            {/* Work link hidden until real projects exist — route still live at /portfolio */}
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-carbon">
-        <div className="wrap flex flex-col gap-3 py-6 font-mono text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
+        <div className="wrap flex flex-col gap-4 py-6 font-mono text-[11px] text-slate-500 md:flex-row md:items-center md:justify-between">
           <span>© {new Date().getFullYear()} {site.name}. All rights reserved.</span>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy" className="hover:text-slate-300">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-slate-300">
+              Terms &amp; Conditions
+            </Link>
+          </div>
           <span className="inline-flex items-center gap-2">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />

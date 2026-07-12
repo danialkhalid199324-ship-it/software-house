@@ -62,7 +62,7 @@ export default function HomePage() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="btn-primary !px-7 !py-3.5">
-                Start a project
+                Book a Consultation
               </Link>
               <Link href="/services" className="btn-ghost-dark !px-7 !py-3.5">
                 Explore services
